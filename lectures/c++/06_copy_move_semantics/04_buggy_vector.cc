@@ -1,12 +1,14 @@
 #include <iostream>
 
+
+
 template <typename num>
 class Vector {
   num* elem;
   std::size_t _size;
 
  public:
-  explicit Vector(const std::size_t length)
+   Vector(const std::size_t length)
       : elem{new num[length]{}}, _size{length} {}
 
   ~Vector() noexcept { delete[] elem; }
@@ -24,11 +26,19 @@ class Vector {
   num* end() noexcept { return elem + _size; }
 };
 
+template <class T>
+void debug (const Vector <T> v){
+  std::cout << " size is  " <<v.size() << std::endl;
+}
+
 int main() {
   Vector<int> v1{3};
   v1[0] = 1;
   v1[1] = 2;
   v1[2] = 3;
+
+  debug<int>(1); //doesn't give error because it coinverts automatically 1 into a vector only
+  //(it should be an error as debug takes vector as argument)
 
   std::cout << "v1: ";
   for (const auto x : v1)

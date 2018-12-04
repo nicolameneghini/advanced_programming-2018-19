@@ -32,7 +32,7 @@ int main() {
   // dwim(2); // error
   dwim(color(2));  // works but what why you may want to write this?
 
-  dwim(color(6));  // ???
+  dwim(color(6));  // Unknow option-> it goes to the default option
 
   return 0;
 }

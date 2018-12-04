@@ -1,0 +1,31 @@
+--- 01 ---
+
+class Foo{
+
+  Foo() = default;
+  Foo(const Foo &) = default;
+  Foo&operator= (const Foo&) = default; -> until here: copy contructor
+  Foo(Foo &&) = default;
+  Fooo operator(Foo&)=default; -> move constructors
+
+}
+
+
+If I run the program I get an unknown symbol. If I build a constructro without culybraces (like x5), the
+variable is not initialized.
+
+
+--- 02 ---
+
+last line doesn't compile because I deleted the copy constructor
+
+the output is: uninitialized: random value;
+               initialized: does what I said;
+               uninitialized: random value;
+
+
+--- 03 ---
+in struct X the default constructor is automatically built as commented
+in struct Y the constructor is a custom one
+
+see the difference between initialized and not

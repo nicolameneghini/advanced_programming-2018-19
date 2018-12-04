@@ -25,7 +25,7 @@ int main() {
   std::cout << s2.a << "--" << s2.b << "--" << s2.s << "\n";
   std::cout << s3.a << "--" << s3.b << "--" << s3.s << "\n";
 
-  // S s4(s2); // compiler error
+   //S s4(s2); // compiler error
 
   return 0;
 }

@@ -1,0 +1,90 @@
+nota : namespace std is the standard namespace-> there could be a conflict. "::" means "scope resolution operator"
+
+
+
+function with no arguments--> empty parenthesis
+
+if there is an argument (i.e. a variable) we have to write function(type variable name)
+
+It is useful to use the type "const"
+
+
+I can define function with the same name but with different return_types (also the number of
+argument can be the same)
+
+->do not copy and paste too much: the same bug could be repeated
+
+---- x02 ----
+
+template <typename aaaa>         //: what is "aaaa"? Anything!
+
+T   dwin (const aaaa a, const aaaa b); //aaaa is valid until the semicolumn
+
+I write the function only one time!
+
+No penalty with runtime
+
+nm executable makes me read the binary
+
+---- x03 ----
+
+
+ram is divided in stack and heap. Variables put in the stack are constantly deleted; in the heap they
+are saved unitl someone specifically say to delete them. Usually a code deals with the stack. In this program
+x and y are saved in the lowest stack; the function swap moves them to a new level of swap
+Swap creates a,b,t ->with the call I assign-> a = 3, b = 7, t = 3 and the function actually swaps them.
+By exiting the function I return to the previous level of stack
+
+
+object = portion of memory, type = dimension of this memory; value = how the memory is filled in
+variable = ?
+
+
+---- x04 ----
+double d
+doube& ref (d)   //reference
+double* ptr (&d)   //pointer ---> the upercent & returns the value (different from the previous)
+
+
+the output is:
+
+content of         d: 9.9
+content of       ref: 9.9
+content of       ptr: 0x7ffee75874f8 --> this is exadecimal (0x): f should be 15 --> adresses are exadecimal
+
+
+address of         d: 0x7ffee75874f8
+address of       ref: 0x7ffee75874f8
+address of       ptr: 0x7ffee75874e8 //differnt place frome the double and the reference (however, it still points to
+that adress!!!)
+
+--> a reference is an alias: same value and same adress (if a change ref I change d)
+
+ref = 7.7;
+content of         d: 7.7
+
+However they all live in the stack
+
+
+If i say a = b and then a I change a, b does not change --> that's what happened with the first swap: VARIABLES
+ARE PASSED BY VALUE!!!
+
+nota: pointers have the same size of the type they point to
+
+
+---- x05 ----
+
+templates work as well.
+
+reference is like a pointer to itself. The memory cost is the same
+
+
+
+---- x06 ----
+
+arrays --> static: I tell the size of the array is know at compile time
+
+
+---- x07 ----
+
+new reserves memeory in the heap a certain space  (in particulare type[dimension])

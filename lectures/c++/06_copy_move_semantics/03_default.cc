@@ -32,7 +32,7 @@ int main() {
   X x3{1, 2.3, 't'};  // compiler error until c++11
   // see https://en.cppreference.com/w/cpp/language/aggregate_initialization
 
-#else
+#else //starting from c++14
 
   X x3;
   x3.a = 1;

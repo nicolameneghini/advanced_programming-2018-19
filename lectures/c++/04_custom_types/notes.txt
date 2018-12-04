@@ -1,0 +1,84 @@
+-- 01 --
+
+type color -> represent the concept of color
+
+
+enum color { red, yellow, green };
+by default red = 0, yellow = 1, green = 2
+
+--> enum generates constants with different numbers
+
+"switch()" can accept int, char and enum
+
+"case" checks if the argument of switch is equal to something
+
+-- 02 --
+
+"enum class" -> I introduce a scope, i.e. I put the variables in a name class (pratically I have to put the colon)
+
+-- 03 --
+
+"enum class" avoids name clashing
+
+-- 04 --
+
+I create two namespaces -> variable must be called as choose_a_name:: variable
+
+I can use more than one namespace. Also i can write "using namespace choose_a_name::nested"
+
+-- 05 --
+nota: com'è possibile fare tutte quelle function con i vector? com'è possibile che array lavori su heap e
+vector su stack? ( o viceversa, non ho capito)
+
+
+C with classes was the first name of C++
+--> In C I had "struct", but those things can only contain data, not functions.
+
+I can call the function of the class usingg var.function() -> I have to make the function public (note: usually a class is
+private)
+
+-- 06 --
+
+Constructors and destructor (plural and singolar: I can have as many Constructors as want but one destructor)
+
+Foo:: Foo (....)
+    : put here the parameters
+    {
+
+
+    }
+
+Foo:: Foo (...)
+    :
+    {
+    _parameters
+    _with
+    _underscores
+
+    }
+
+---> operator overloading: operator are basically function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

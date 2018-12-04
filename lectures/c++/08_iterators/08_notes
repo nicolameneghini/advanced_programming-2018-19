@@ -1,0 +1,17 @@
+a linked list is a sequence of blocks in the heap
+every block contains a pointer to the following one (the last points to null pointer)
+This is single linked list
+
+There is also double linked list where the pointer is in both directions
+
+Data hiding: the interal technicalities thorough which the list links are not provided to the user
+In this way I can work in a multi thread environment more easiliy
+
+-----
+
+iterator is a generalized type of pointer
+T& operator*()
+T&  operator->()
+
+iterator operator++() returns ++it
+iterator operator++(int) returns it++

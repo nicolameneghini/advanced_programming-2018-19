@@ -1,0 +1,61 @@
+-- 01 --
+
+auto declaration
+
+--> the type I return is not always clear-> "auto" updates automatically the type
+
+template <class T>
+auto init(const std::size_t l) {
+  return new T[l]{};  // initialize to zero all the values
+}
+
+#if __cplusplus > 201103L --> preprocessing if
+
+-- 02 --
+
+const int* pc = &a; // pointer to integer const
+
+int* const cp = &a; // const pointer to int (it points to a constant memory location)
+
+N.B.: leggi da destra verso sinistra;
+
+
+sentinel: the element past the last one
+
+a[i] == * (&a[0] +i) == *(a+i) == *(i+a) == i[a]
+
+if a is a pointer to the first location, a++ is the pointer to the second location
+
+-- 03 --
+
+int* ap[7]; // array of 7 pointers
+
+void * pv{pi} -> pointer to void, i.e. to whatever -> n.b.: I cannot do pv++ b/c I do not know the size of the
+elements. The only way I can use a pointer to void is a cast performed at runtime
+
+nullptr: null pointer-> the pointer is pointing to something not useful
+
+difference between pointer and dereference: ???????
+
+
+-- 04 --
+
+int main(int argc, char* argv[]) // stores the command lines-> argc counts, argv contains the name of the commands
+
+
+-- 05 --
+
+matrices are stored in the opposite way of fortran --> I have to store the entries of a matrix following the input of
+the compiler: it is faster!
+
+int* d_ma = new int[6 * 5]{}; // allocation
+
+-- 06 --
+
+std:: vector --> memory location adiacent: make the program much faster
+
+for (auto i = 0u; i < a.size(); ++i)
+
+b.at(90);  // bound checking at run-time
+
+-- 07 --

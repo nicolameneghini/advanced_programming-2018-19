@@ -1,0 +1,129 @@
+--- 01 ---
+
+functions with the same name in two different spaces
+
+
+Base : print_animal |
+Derived : dog       |-> polimorfysm
+
+dynamic polymorphism: the type of an animal can be discorved only at runtime. To do this I
+have to use a refernce &
+
+if we execute the runtime polimorfysm doesn't work!! It return the class Animal
+
+--- 02 ---
+
+To achieve this we have to enrich our syntax. Before we were hiding the function
+
+virtual is the correct syntax to trigger the runtime polymorfism (N.B: I have to use the
+destructor!!)
+
+in addition I have to declare an override statement in the second declaration (it's not mandatory,
+but helps the compiler); I also have to use the fully qualified name of the function [Animal::info();] in
+case I want to add something
+
+--- 03 ---
+
+int main() {
+  { Derived d; } ---> the scope is to call both the constructor and the destructor
+
+  std::cout << "\n\npointers\n";
+  Base* p = new Derived;  ---> point to the children --> calls the constructors of the two classes
+  delete p;
+
+
+}
+
+Actually, as I delete p I do not call the destructor of base anymore. I have to mark its destructor as virtual
+--> in this way the pattern acquisization and etc of the destructor is correctely called
+
+--- 04 ---
+
+using instead of typename
+using can be templated
+
+using vector = Marix <1,i,j>
+
+using Animal::Animal;  --> I do not need the constructors any more
+        |        |
+        scoped   constructros
+
+
+--- 05 ---
+
+dynamic cast: performed at run time -> used to understand the hierarchy (of my position. See line 69)
+static cast: "            "compile time
+
+
+-------
+
+hierchy in c++. We have seen only iostream --> the others are the same
+
+std::ofstream f{path to folder}
+f << v
+
+
+------
+
+folder organized
+
+I can separte function declaration and function definitio
+
+What to put in header and what to put in function.
+
+To use a function I need to know its signature ( i.e. its declaration)
+
+All function declaration must be put in a header
+
+The src file is made of its implementation plus the headers. Then, an object file is produced
+
+My executable is obtained combining all the object plus the libraries
+
+I can split the program in different files and compile them parallely. The linking time will
+be higher but nothing compared with compilation
+
+So how to organize all this?
+
+- in the headers function declaration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

@@ -1,13 +1,8 @@
 /*
 21/10/2018        Nicola Meneghini
-
 Aim: calculating the mean and the median of the data read form a file
-
 If I include the fstream library I just need to use open() and good() functions in order to read the data until the end
 of the file. I use an array to store this data and I am increasing the dimension of thi array every time
-
-
-
 */
 
 #include <iostream>

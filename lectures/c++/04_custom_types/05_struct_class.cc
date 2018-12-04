@@ -34,7 +34,7 @@ int main() {
   pc.print();  // I can access private data through public functions
 
   Point_s* p = &ps;
-  p->x = 0.0;
+  p->x = 0.0; // equivalent to (*p).x = 0.0 --> I need to specify the priority of the operators
   p->print();
 
   auto& pr = ps;

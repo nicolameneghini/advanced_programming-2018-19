@@ -1,0 +1,104 @@
+--- 01 ---
+
+class Foo{
+
+  Foo() = default;
+  Foo(const Foo &) = default;
+  Foo&operator= (const Foo&) = default; -> until here: copy contructor
+  Foo(Foo &&) = default;
+  Foo operator(Foo&)=default; -> move constructors
+
+}
+
+
+If I run the program I get an unknown symbol. If I build a constructro without culybraces (like x5), the
+variable is not initialized.
+
+
+--- 02 ---
+
+last line doesn't compile because I deleted the copy constructor
+
+the output is: uninitialized: random value;
+               initialized: does what I said;
+               uninitialized: random value;
+
+
+--- 03 ---
+in struct X the default constructor is automatically built as commented
+in struct Y the constructor is a custom one
+
+see the difference between initialized and not
+
+
+--- 04 ---
+
+contructors and pointers
+
+note: the range for uses the sentinel approach, i.e. it shifts until it reache the sentinel element(the one after the
+last one) -> noexcept is used, i.e. is always done in this way (it's a code optimization)
+
+In the program a do a shallow copy: it means that whenever I change v1 or its copy v2, I actually modify both
+of them. Copying the pointer in this way, I make the vector v2 pointing to the same memory adress.
+
+Shallow copy is a cheap copy.
+
+explicit constructor: avoid implicit conversions
+
+
+--- 05 ---
+
+
+--- 06 ---
+
+move semantic.
+
+The copy function work. Let's try to make a swap function for our class
+
+template <class T>
+
+voi swap(T&t1, T&t2){
+auto tmp = t2;
+t2 = t1;
+t1 = tmp;}
+
+I am cloning two vectors and then swapping them. With move semantic I can swap them without cloning
+
+template <class T>
+
+voi swap(T&t1, T&t2){
+auto tmp = std::move(t2);
+t2 = std::move(t1);
+t1 = std::move(tmp);
+}
+
+with the move semantic I always have only one pointer.
+
+note: every class has a poiter (called "this") that points to itself
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

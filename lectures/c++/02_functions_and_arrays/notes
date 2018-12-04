@@ -1,0 +1,5 @@
+function with no arguments--> empty parenthesis
+
+if there is an argument (i.e. a variable) we have to write function(type variable name)
+
+It is useful to use the type "const"

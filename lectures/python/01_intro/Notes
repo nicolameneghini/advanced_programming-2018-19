@@ -1,0 +1,33 @@
+Python is derived from ABC, a language meant to be easy and accessible to everyone.
+BDFL-> benevolent dictator for life
+How old is Python? It was invented in 1991 (c++ in 1989)
+-> Python is interpreted!!!
+How can I run a Python program? There are three ways
+with "python" ( or better "python3")
+--> variable  are not bounded to the object
+--> I can query the tyoe of a varibale
+
+--> In ython everything is an obkìject, also the class type-> there are no variables -> python is dynamically
+typing languege. I can give to a the value of 5 and in the next line a string
+
+------
+%reset is equivalent to restart the kernel
+------
+
+print(dir()) prints all the variables the compiler knows
+
+------
+
+list -> square brackets
+list[start:stop:step]
+list[:-1] -> stop = last element excluded
+list[:-2] -> stop = second last element excluded
+
+tuples are like lists but are not changable -> also they have round parenthesis
+'tuple' object does not support item assignment
+
+tuple packing ->
+
+------
+
+dictionaries -> they have keys-> unordered pair of values

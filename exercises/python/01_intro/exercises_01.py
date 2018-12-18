@@ -3,11 +3,11 @@ def is_palindrome(string_var):
     '''
     returns True if string_var is palindrome, False otherwise
     '''
-    ret = None
     ########################
     # code here
     ########################
-    return ret 
+    
+    return string_var == reversed(string_var)
 
 def histogram_letters(string_var):     
     '''

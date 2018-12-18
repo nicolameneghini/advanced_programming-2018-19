@@ -1,0 +1,55 @@
+variable in python
+we don't really know where variables are located in memory
+
+--- 1 ---
+
+module are just files.py
+
+--> import my_module --> I just created a namespace in memory!
+--> I can import just one function of the module
+--> I can create a different namespace (import ... as ...)
+from module import all --> from ... import *
+
+Where are modules loaded? I can use .path I will also get the "" package
+
+At the (re-) import time will appear a __pycache__ which is a binary file
+
+In the __init__ file are written the instructions that tell me which functions are to be imported
+
+
+--- 2 ---
+
+functions:
+
+--- 3 ---
+
+Global variable and locals.
+ -> if defined inside the functions they are local. But what if I declare a variable both inside and outside
+ the function? There is an error. But I can use the instruction "global"
+--- 4 ---
+- I can inspect the code.
+
+- A function can return another function
+
+--- 5 ---
+
+default copy is shallow
+
+== perform a comparison by value
+is does the same thing
+
+if I have a list of list what will happen is that both variables change if I change one--> it is the cheapest thing to do as
+i have a pointer to pointer
+
+--- 6 ---
+
+-lambda function: the "capture" and the "element" of c++ are collapsed into one variable
+-watch out for mutable variables
+
+--- 7 ---
+
+
+
+---
+Note: %reset -f resets the previous commands
+with ! i give a shell command

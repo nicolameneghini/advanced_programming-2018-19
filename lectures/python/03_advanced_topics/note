@@ -1,0 +1,95 @@
+18/12
+
+-- 01 --
+
+Decorator: no precise definition --> @decorate1 -> overwrite the functon which ill be called through the
+decorator -> it is like a inner functions
+
+-> i can nest different decorator
+
+Suppose I want to time a function: see example
+
+@time_this
+wait
+
+means: time_this(wait) -> the decorator creates a closure  (the object decorated is moved inside the decorator)
+
+@functools.lru_cache() creates a look-up table (if already printed does not print anymore)
+
+Also I can decide if to actually apply the decorator by saying (true) or (false)
+
+-- 02 --
+
+property decorator -> makes your vriable constants & can overload the operator =
+
+making everything public may be useful, but sometimes I need some checks and make variables constants
+|
+|-> in python there exists no private variables
+
+-- 03 --
+
+error handling
+
+I can throw exception -> i use "try" to try an operation and then "except" to handle the error
+-> more detailed: "assert"
+
+-- 04 --
+
+inheritance
+
+duck typing: it has to behave like a list, it is not necessary for it to be a list.
+
+I can use inheritance (between classes) instead of duck typing
+
+- super().foo()  skips a level
+- __mro__ method resolution order -> it gives me the geneology (here it use declared in class E(B,C,D))
+- isistance tells me if a class is an instance
+- abstract classes -> class with pure virtual function -> I can use the decorator
+
+-- 05 --
+
+iterables and iterators.
+
+Once it has iterated the variable disappear and I cannot use it anymore
+
+I have to use generators -> the have "yield"
+
+what if I have a range of 10000000000 and I have to do a loop in that? I have to create an expensive variable
+range(10000000) -> instead I can use Generator expressions :for i in (n for n in range(100000000)):
+This stores one variable at a time
+
+
+-- 06 --
+
+with open("new_file.txt",'w') as f:
+    for i in range(10):
+        print(i,file=f)
+        #f.write(str(i)+'\n')
+f.closed
+
+tells me "true" because the context manager has closed the file
+
+(context manger: it is an object with an "enter" and an "exit" function)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

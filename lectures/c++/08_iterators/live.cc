@@ -88,7 +88,7 @@ public:
       };
   }
 
-    class Iterato;
+    class Iterator;
     class Constiterator;
     Iterator begin() {return Iterator{head.get()};}
     iterator end(); {return Iterator{nullptr};}

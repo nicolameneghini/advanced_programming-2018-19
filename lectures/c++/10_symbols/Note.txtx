@@ -1,0 +1,120 @@
+linking fase --> adding libraries to the exececutable
+
+How can I generate libraries?
+
+Libraries are of two types: (shared or dynamic) or (static)
+
+We are now going to use shared libraries
+
+If we want to use external libraries, the compilier needs to know the signature of the Libraries
+--> header files must be included and link against the whole library
+
+Why shared libraries? They are usefule because the actual implementation of a function enter after the compilation
+-->the compilation is slow while linking is fast--> if I have a huge project, and I need to change something
+there I just waste the linking time.
+
+How can I generate a shared library? Makefile!
+Library is a collection of files without a name
+
+
+g++ -c src/conclusion.cc -I include --> includes the path
+
+g++ conclusion.o conclusion.o --> ld exit status --> main not defined
+
+i need the flag "-fpic" -> position indipendent code --> I need to ask the copiler to generate the execetuable
+written in such a way that the library is located in a specific position, separeted from the rest
+
+suffix .so -> shared object
+
+g++ -c src/greetings.cc -I include -fpic
+g++ -c src/conclusion.cc -I include -fpic
+  conclusion.o greetings.o -o libgreetings.so
+
+#include <conclusion.h>
+#include <iostream>
+
+void print_conclusion() {
+#ifdef ITALIANO
+  std::cout << "Ci vediamo giovedì\n";
+#endif
+
+#ifdef ENGLISH
+  std::cout << "See you on Thursday\n";
+#endif
+}
+
+Defined only if the language is specified --> I need to specify it at the compilation time. Or, more
+elegantly, I can to define a macro (compile flag -D ITALIANO)
+
+--> study the Makefile
+
+
+-02 --
+
+check out where the libraies are located (--> use ldd to see that). See if the apth is the correct. If not
+change the variable PATH
+
+export LIBRARY_PATH=../01_greetings_library/:$LIBRARY_PATH
+
+--> updating the libraries automatically change the executable--> i do not need to recompile
+
+alternatevely I can modify the make file with " ,Wl-rpath,$(GDIR)" in the LFLAGS
+
+
+
+-- 03 --
+
+static for a global variable (--> change the file constant.h)
+--> implies an external linkage
+
+difference between internal and external linkage -> If I have to use a header in more files, I have two
+pssibilities: weather I define... or ....
+
+
+--04 --
+... important!
+
+--05--
+
+some implication to understand what to put and not to put in a header file
+
+folder 01: suppose we have a funcction with only one line-> it is not worthy to put its implementation
+in the file and the signature in the header-> I have to make a jump in memory
+
+function dummy in the header called in src, src2 and main but a fucntion can be defined only once
+
+folder 02: function inlining can solve the problem+
+
+folder 03: tempalting also solves the problem -> it does not break the 1 definition rule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

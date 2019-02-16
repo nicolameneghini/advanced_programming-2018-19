@@ -42,7 +42,7 @@ std::ostream& operator<<(std::ostream& os, const Foo& f) {
   return os;
 }
 
- main() {
+int main() {
   Foo f0;    // call default ctor
   Foo f1{};  // call default ctor
   // Foo f2(); // compiler error

@@ -47,8 +47,7 @@ class ManyResources {
   ~ManyResources() noexcept {
     std::cout << "Manyresources\n";
     delete[] ptr;  // <----
-  }
-};
+23};
 
 int main() {
   Foo f;

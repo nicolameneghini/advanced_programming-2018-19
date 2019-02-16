@@ -22,7 +22,7 @@ int main() {
   pv = ap;
   pv = pi;
 
-  pi = nullptr;
+  //pi = nullptr;
   ppc = nullptr;
   // ap = nullptr;  // error, why?
   ap[0] = nullptr;

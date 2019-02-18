@@ -1,15 +1,15 @@
 
-def is_palindrome(string_var):     
+def is_palindrome(string_var):
     '''
     returns True if string_var is palindrome, False otherwise
     '''
     ########################
     # code here
     ########################
-    
+
     return string_var == reversed(string_var)
 
-def histogram_letters(string_var):     
+def histogram_letters(string_var):
     '''
     count how many times a letter is present in the string_var
     and returns a dict
@@ -19,11 +19,11 @@ def histogram_letters(string_var):
     ########################
     # code here
     ########################
-    return ret 
+    return ret
 
 def get_most_frequent(list_var):
     '''
-    returns a tuple with the most frequent object in the list with the 
+    returns a tuple with the most frequent object in the list with the
     corresponing number
     '''
     ret = None
@@ -63,6 +63,3 @@ def is_prime(int_val):
     # code here
     ########################
     return ret
-
-        
-

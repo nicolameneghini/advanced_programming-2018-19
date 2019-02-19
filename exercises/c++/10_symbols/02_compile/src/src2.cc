@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/utility.h"
+#include "utility.h"
 
 std::string greetings(){
   std::string s{"Good afternoon\n"};

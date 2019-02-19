@@ -10,7 +10,7 @@ libtest.so: $(OBJ)
 	$(CXX) -shared -o $@ $^
 
 %.o:%.cc
-	$(CXX) -fpic -D$(LANG) -o $@ -c $< -Iinclude
+	$(CXX) -fpic -D$(LANG) -o $@ -c $< -I include
 
 source/hello.o: include/hello.h
 
